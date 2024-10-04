@@ -35,35 +35,28 @@ public class ProductosCongelados extends Articulos {
     
     
     
-    @Override
-    public void mostrar_informacion() {
-        switch (this.getMetodo_congelacion()) {
-            case "aire":
-                System.out.println("ID ARTICULO: " + getId_articulo()
-                        + " NOMBRE: " + getNombre()
-                        + " CATEGORIA: " + getCategoria()
-                        + " LOTE: " + getNumero_lote()
-                        + " FECHA ENVASADO: " + getFecha_envasado()
-                        + " TEMPERATURA RECOMENDADA : " + getTemperatura_mantenimiento()
-                );
-                break;
-            case "agua":
+@Override
+public void mostrar_informacion() {
+    System.out.println("ID ARTICULO: " + getId_articulo()
+            + " NOMBRE: " + getNombre()
+            + " CATEGORIA: " + getCategoria()
+            + " LOTE: " + getNumero_lote()
+            + " FECHA ENVASADO: " + getFecha_envasado()
+            + " TEMPERATURA RECOMENDADA : " + getTemperatura_mantenimiento());
 
-                break;
-            case "Nitrogeno":
-
-                break;
-            default:
-                System.out.println("ID ARTICULO: " + getId_articulo()
-                        + " NOMBRE: " + getNombre()
-                        + " CATEGORIA: " + getCategoria()
-                        + " LOTE: " + getNumero_lote()
-                        + " FECHA ENVASADO: " + getFecha_envasado()
-                        + " TEMPERATURA RECOMENDADA : " + getTemperatura_mantenimiento()
-                );
-        }
-
+    if (this.getMetodo_congelacion() != null) {
+        System.out.println("Método de congelación: " + getMetodo_congelacion());
+    } else {
+        System.out.println("Método de congelación no especificado.");
     }
+
+    if (this.getTiempo_exposicion_nitrogeno() != null) {
+        System.out.println("Tiempo de exposición al nitrógeno: " + getTiempo_exposicion_nitrogeno() + " segundos");
+    } else {
+        System.out.println("Tiempo de exposición no especificado.");
+    }
+}
+
 
     /**
      * @return the tipo_congelado
