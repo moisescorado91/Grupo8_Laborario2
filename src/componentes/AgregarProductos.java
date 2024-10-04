@@ -67,24 +67,6 @@ public class AgregarProductos extends ComponentesMenu {
         System.out.println("2. Congelado por Agua");
         System.out.println("3. Congelado por Nitrógeno");
 
-//        objeto_producto_congelado.setId_articulo(id_articulo);
-//        objeto_producto_congelado.setCategoria(tipos_productos_congelados(entrada));
-//
-//        System.out.println("Ingresa El nombre del articulo");
-//        objeto_producto_congelado.setNombre(entrada.nextLine());
-//        entrada.nextLine();
-//
-//        System.out.println("Ingresa numero de lote del articulo");
-//        objeto_producto_congelado.setNumero_lote(entrada.nextInt());
-//        entrada.nextLine();
-//
-//        System.out.println("Ingresa fecha de envasado del articulo");
-//        objeto_producto_congelado.setFecha_envasado(entrada.nextLine());
-//
-//        System.out.println("Ingresa temperatura de ambiente relacionado");
-//        objeto_producto_congelado.setTemperatura_mantenimiento(entrada.nextLine());
-//
-//        return objeto_producto_congelado;
         int tipoCongelado = entrada.nextInt();
         ProductosCongelados producto = null;
 

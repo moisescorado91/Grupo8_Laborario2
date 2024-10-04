@@ -27,7 +27,6 @@ public class ProductosCongelados extends Articulos {
         this.porcentaje_oxigeno = 0;
         this.porcentaje_dioxido_carbono = 0;
         this.porcentaje_vapor_agua = 0;
-
         this.sal_por_litro = 0;
     }
 

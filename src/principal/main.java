@@ -12,7 +12,7 @@ import componentes.AgregarProductos;
 import componentes.ProductosEnvasados;
 import componentes.ProductosCongelados;
 import componentes.ProductosRefrigerados;
-import componentes.Articulos; 
+import componentes.Articulos;
 
 public class main {
 
@@ -28,14 +28,13 @@ public class main {
 
         ProductosFrescos test1_fresco = new ProductosFrescos(1001, "Manzana", "Frutas", 1001, "2024-10-03", "2024-10-03");
         productos.add(test1_fresco);
-        
+
         ProductosEnvasados test1_envasado = new ProductosEnvasados(1002, "Nombre", "Sopa", 1002, "2024-10-03", "2024-10-03", true);
         productos.add(test1_envasado);
-        
+
         ProductosRefrigerados test1_refrigerado = new ProductosRefrigerados(1003, "Gaseosa", "Refresco", 1003, "2024-10-03", "2024-10-03", "El Salvador");
         productos.add(test1_refrigerado);
-        
-        
+
         int id_articulo = 1;
         int respuesta_menu;
 
@@ -92,18 +91,7 @@ public class main {
             respuesta_menu = menu_opciones.mostrar_menu_view(entrada);
 
             if (respuesta_menu == 1) {
-                int respuesta_seleccion = menu_opciones.tipos_visualizaciones_categorias(entrada);
-                switch (respuesta_seleccion) {
-                    case 1:
-                    case 2:
-                    case 3:
-                    case 4:
-                        productos.forEach(Articulos::mostrar_informacion);
-                        break;
-                    default:
-                        System.out.println("No se encontró la selección.");
-                }
-
+                productos.forEach(Articulos::mostrar_informacion);
                 System.out.println("¿Necesitas visualizar otra categoría? \n 1. Seguir \n 2. Salir");
                 int salir = entrada.nextInt();
                 if (salir == 2) {
@@ -118,4 +106,3 @@ public class main {
         System.out.println("Sistema Cerrado");
     }
 }
-
