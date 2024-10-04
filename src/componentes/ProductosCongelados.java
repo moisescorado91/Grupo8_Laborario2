@@ -45,6 +45,28 @@ public class ProductosCongelados extends Articulos {
         this.sal_por_litro = (float) sal_por_litro;
     }
 
+    @Override
+    public void mostrar_informacion() {
+        System.out.println("ID ARTICULO: " + getId_articulo()
+                + " NOMBRE: " + getNombre()
+                + " CATEGORIA: " + getCategoria()
+                + " LOTE: " + getNumero_lote()
+                + " FECHA ENVASADO: " + getFecha_envasado()
+                + " TEMPERATURA RECOMENDADA : " + getTemperatura_mantenimiento());
+
+        if (this.getMetodo_congelacion() != null) {
+            System.out.println("Método de congelación: " + getMetodo_congelacion());
+        } else {
+            System.out.println("Método de congelación no especificado.");
+        }
+
+        if (this.getTiempo_exposicion_nitrogeno() != null) {
+            System.out.println("Tiempo de exposición al nitrógeno: " + getTiempo_exposicion_nitrogeno() + " segundos");
+        } else {
+            System.out.println("Tiempo de exposición no especificado.");
+        }
+    }
+
     /**
      * @return the tipo_congelado
      */
@@ -157,51 +179,51 @@ public class ProductosCongelados extends Articulos {
         this.tiempo_exposicion_nitrogeno = tiempo_exposicion_nitrogeno;
     }
 
-    @Override
-    public void mostrar_informacion() {
-        switch (this.getMetodo_congelacion()) {
-            case "aire":
-                System.out.println("ID ARTICULO: " + getId_articulo()
-                        + " NOMBRE: " + getNombre()
-                        + " CATEGORIA: " + getCategoria()
-                        + " LOTE: " + getNumero_lote()
-                        + " FECHA ENVASADO: " + getFecha_envasado()
-                        + " TEMPERATURA RECOMENDADA : " + getTemperatura_mantenimiento()
-                        + " % NITROGENO: " + getPorcentaje_nitrogeno()
-                        + " % OXIGENO: " + getPorcentaje_oxigeno()
-                        + " % DIOXIDO DE CARBONO: " + getPorcentaje_dioxido_carbono()
-                        + " % VAPOR DE AGUA " + getPorcentaje_vapor_agua()
-                );
-                break;
-            case "agua":
-                System.out.println("ID ARTICULO: " + getId_articulo()
-                        + " NOMBRE: " + getNombre()
-                        + " CATEGORIA: " + getCategoria()
-                        + " LOTE: " + getNumero_lote()
-                        + " FECHA ENVASADO: " + getFecha_envasado()
-                        + " TEMPERATURA RECOMENDADA : " + getTemperatura_mantenimiento()
-                        + " gramos de sal por litro de agua: " + getSal_por_litro()
-                );
-                break;
-            case "nitrogeno":
-                System.out.println("ID ARTICULO: " + getId_articulo()
-                        + " NOMBRE: " + getNombre()
-                        + " CATEGORIA: " + getCategoria()
-                        + " LOTE: " + getNumero_lote()
-                        + " FECHA ENVASADO: " + getFecha_envasado()
-                        + " TEMPERATURA RECOMENDADA : " + getTemperatura_mantenimiento()
-                        + " METODO CONGELACION: " + getMetodo_congelacion()
-                        + " EXPOSICION DE NITROGENO EN SEGUNDOS: " + getTiempo_exposicion_nitrogeno()
-                );
-                break;
-            default:
-                System.out.println("ID ARTICULO: " + getId_articulo()
-                        + " NOMBRE: " + getNombre()
-                        + " CATEGORIA: " + getCategoria()
-                        + " LOTE: " + getNumero_lote()
-                        + " FECHA ENVASADO: " + getFecha_envasado()
-                        + " TEMPERATURA RECOMENDADA : " + getTemperatura_mantenimiento()
-                );
-        }
-    }
+//    @Override
+//    public void mostrar_informacion() {
+//        switch (this.getMetodo_congelacion()) {
+//            case "aire":
+//                System.out.println("ID ARTICULO: " + getId_articulo()
+//                        + " NOMBRE: " + getNombre()
+//                        + " CATEGORIA: " + getCategoria()
+//                        + " LOTE: " + getNumero_lote()
+//                        + " FECHA ENVASADO: " + getFecha_envasado()
+//                        + " TEMPERATURA RECOMENDADA : " + getTemperatura_mantenimiento()
+//                        + " % NITROGENO: " + getPorcentaje_nitrogeno()
+//                        + " % OXIGENO: " + getPorcentaje_oxigeno()
+//                        + " % DIOXIDO DE CARBONO: " + getPorcentaje_dioxido_carbono()
+//                        + " % VAPOR DE AGUA " + getPorcentaje_vapor_agua()
+//                );
+//                break;
+//            case "agua":
+//                System.out.println("ID ARTICULO: " + getId_articulo()
+//                        + " NOMBRE: " + getNombre()
+//                        + " CATEGORIA: " + getCategoria()
+//                        + " LOTE: " + getNumero_lote()
+//                        + " FECHA ENVASADO: " + getFecha_envasado()
+//                        + " TEMPERATURA RECOMENDADA : " + getTemperatura_mantenimiento()
+//                        + " gramos de sal por litro de agua: " + getSal_por_litro()
+//                );
+//                break;
+//            case "nitrogeno":
+//                System.out.println("ID ARTICULO: " + getId_articulo()
+//                        + " NOMBRE: " + getNombre()
+//                        + " CATEGORIA: " + getCategoria()
+//                        + " LOTE: " + getNumero_lote()
+//                        + " FECHA ENVASADO: " + getFecha_envasado()
+//                        + " TEMPERATURA RECOMENDADA : " + getTemperatura_mantenimiento()
+//                        + " METODO CONGELACION: " + getMetodo_congelacion()
+//                        + " EXPOSICION DE NITROGENO EN SEGUNDOS: " + getTiempo_exposicion_nitrogeno()
+//                );
+//                break;
+//            default:
+//                System.out.println("ID ARTICULO: " + getId_articulo()
+//                        + " NOMBRE: " + getNombre()
+//                        + " CATEGORIA: " + getCategoria()
+//                        + " LOTE: " + getNumero_lote()
+//                        + " FECHA ENVASADO: " + getFecha_envasado()
+//                        + " TEMPERATURA RECOMENDADA : " + getTemperatura_mantenimiento()
+//                );
+//        }
+//    }
 }
