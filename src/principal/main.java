@@ -32,6 +32,16 @@ public class main {
         ArrayList<ProductosEnvasados> productos_envasados = new ArrayList<>();
         ArrayList<ProductosFrescos> productos_frescos = new ArrayList<>();
 
+        ProductosFrescos test1_fresco = new ProductosFrescos(1001, "Manzana", "Frutas", 1001, "2024-10-03", "2024-10-03");
+        productos_frescos.add(test1_fresco);
+        
+        ProductosEnvasados test1_envasado = new ProductosEnvasados(1002, "Nombre", "Sopa", 1002, "2024-10-03", "2024-10-03", true);
+        productos_envasados.add(test1_envasado);
+        
+        ProductosRefrigerados test1_refrigerado = new ProductosRefrigerados(1003, "Gaseosa", "Refresco", 1003, "2024-10-03", "2024-10-03", "El Salvador");
+        productos_refrigerados.add(test1_refrigerado);
+        
+        
         int id_articulo = 1;
         int respuesta_menu;
 

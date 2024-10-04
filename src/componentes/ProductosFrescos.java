@@ -9,6 +9,17 @@ package componentes;
  * @author Moises Molina
  */
 public class ProductosFrescos extends Articulos {
+    public ProductosFrescos(){
+        
+    }
+    public ProductosFrescos(int id_articulo, String nombre, String categoria, int lote, String fecha_ingreso, String fecha_caducidad){
+        setId_articulo(id_articulo);
+        setNombre(nombre);
+        setCategoria(categoria);
+        setNumero_lote(lote);
+        setFecha_ingreso(fecha_ingreso);
+        setFecha_caducidad(fecha_caducidad);
+    }
 
     @Override
     public void mostrar_informacion() {

@@ -97,12 +97,12 @@ public class ComponentesMenu {
         String seleccion;
 
         do {
-            seleccion = entrada.nextLine(); // se mueve aquí para capturar cada nueva entrada
+            seleccion = entrada.nextLine();
 
             if (!seleccion.equals("Fruta") && !seleccion.equals("Verdura")) {
                 System.out.println("Opción incorrecta, por favor selecciona Fruta o Verdura.");
             } else {
-                bandera = false; // Se detiene el ciclo si la opción es válida
+                bandera = false; 
             }
 
         } while (bandera);

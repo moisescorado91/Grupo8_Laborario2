@@ -16,13 +16,11 @@ public class AgregarProductos extends ComponentesMenu {
         ProductosFrescos objeto_producto_fresco = new ProductosFrescos();
 
         objeto_producto_fresco.setId_articulo(id_articulo);
+        objeto_producto_fresco.setCategoria(tipos_productos_frescos(entrada));
 
         System.out.println("Ingresa El nombre del articulo");
         objeto_producto_fresco.setNombre(entrada.nextLine());
         entrada.nextLine();
-
-        //System.out.println("Ingresa La categoria del articulo");
-        objeto_producto_fresco.setCategoria(tipos_productos_frescos(entrada));
 
         System.out.println("Ingresa numero de lote del articulo");
         objeto_producto_fresco.setNumero_lote(entrada.nextInt());
@@ -41,13 +39,11 @@ public class AgregarProductos extends ComponentesMenu {
         ProductosRefrigerados objeto_producto_refrigerado = new ProductosRefrigerados();
 
         objeto_producto_refrigerado.setId_articulo(id_articulo);
+        objeto_producto_refrigerado.setCategoria(tipos_productos_refrigerados(entrada));
 
         System.out.println("Ingresa El nombre del articulo");
         objeto_producto_refrigerado.setNombre(entrada.nextLine());
         entrada.nextLine();
-
-        //System.out.println("Ingresa La categoria del articulo");
-        objeto_producto_refrigerado.setCategoria(tipos_productos_refrigerados(entrada));
 
         System.out.println("Ingresa numero de lote del articulo");
         objeto_producto_refrigerado.setNumero_lote(entrada.nextInt());
@@ -69,13 +65,11 @@ public class AgregarProductos extends ComponentesMenu {
         ProductosCongelados objeto_producto_congelado = new ProductosCongelados();
 
         objeto_producto_congelado.setId_articulo(id_articulo);
+        objeto_producto_congelado.setCategoria(tipos_productos_congelados(entrada));
 
         System.out.println("Ingresa El nombre del articulo");
         objeto_producto_congelado.setNombre(entrada.nextLine());
         entrada.nextLine();
-
-        //System.out.println("Ingresa La categoria del articulo");
-        objeto_producto_congelado.setCategoria(tipos_productos_congelados(entrada));
 
         System.out.println("Ingresa numero de lote del articulo");
         objeto_producto_congelado.setNumero_lote(entrada.nextInt());
@@ -94,13 +88,11 @@ public class AgregarProductos extends ComponentesMenu {
         ProductosEnvasados objeto_producto_envasados = new ProductosEnvasados();
 
         objeto_producto_envasados.setId_articulo(id_articulo);
+        objeto_producto_envasados.setCategoria(tipos_productos_envasados(entrada));
 
         System.out.println("Ingresa El nombre del articulo");
         objeto_producto_envasados.setNombre(entrada.nextLine());
         entrada.nextLine();
-        
-        //System.out.println("Ingresa La categoria del articulo");
-        objeto_producto_envasados.setCategoria(tipos_productos_envasados(entrada));
 
         System.out.println("Ingresa numero de lote del articulo");
         objeto_producto_envasados.setNumero_lote(entrada.nextInt());
@@ -109,8 +101,20 @@ public class AgregarProductos extends ComponentesMenu {
         System.out.println("Ingresa fecha de envasado del articulo");
         objeto_producto_envasados.setFecha_envasado(entrada.nextLine());
 
+        System.out.println("Ingresa fecha de caducidad del articulo");
+        objeto_producto_envasados.setFecha_caducidad(entrada.nextLine());
+
         System.out.println("Ingresa temperatura de ambiente relacionado");
         objeto_producto_envasados.setTemperatura_mantenimiento(entrada.nextLine());
+
+        System.out.println("¿Necesita Refrigerar luego de abrir?");
+        System.out.println("1. Si \n 2. No");
+        boolean condicion = false;
+        int valor = entrada.nextInt();
+        if (valor == 1) {
+            condicion = true;
+        }
+        objeto_producto_envasados.setRefrigerar_despues_abierto(condicion);
 
         return objeto_producto_envasados;
     }
