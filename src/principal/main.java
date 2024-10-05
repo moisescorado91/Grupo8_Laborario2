@@ -103,6 +103,8 @@ public class main {
         } while (seguir_visualizando);
 
         entrada.close();
-        System.out.println("Sistema Cerrado");
+        System.out.println("**********************************************");
+        System.out.println("            Sistema Cerrado                    ");
+        System.out.println("**********************************************");
     }
 }

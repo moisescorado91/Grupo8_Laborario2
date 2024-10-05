@@ -102,7 +102,7 @@ public class ComponentesMenu {
             if (!seleccion.equals("Fruta") && !seleccion.equals("Verdura")) {
                 System.out.println("Opción incorrecta, por favor selecciona Fruta o Verdura.");
             } else {
-                bandera = false; 
+                bandera = false;
             }
 
         } while (bandera);
@@ -175,6 +175,27 @@ public class ComponentesMenu {
             }
 
         } while (bandera);
+
+        return seleccion;
+    }
+
+    public int tipo_de_congelacion_producto(Scanner entrada) {
+        int seleccion;
+
+        do {
+            System.out.println("*******************************************");
+            System.out.println("Selecciona el tipo de congelado:");
+            System.out.println("*******************************************");
+            System.out.println("1. Congelado por Aire");
+            System.out.println("2. Congelado por Agua");
+            System.out.println("3. Congelado por Nitrógeno");
+            seleccion = entrada.nextInt();
+            if (seleccion < 1 || seleccion > 3) {
+                System.out.println("Opcion Incorrecta");
+
+            }
+
+        } while (seleccion < 1 || seleccion > 3);
 
         return seleccion;
     }

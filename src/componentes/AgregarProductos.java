@@ -62,24 +62,24 @@ public class AgregarProductos extends ComponentesMenu {
     }
 
     public ProductosCongelados agregar_producto_congelado(Scanner entrada, int id_articulo) {
-        System.out.println("Selecciona el tipo de congelado:");
-        System.out.println("1. Congelado por Aire");
-        System.out.println("2. Congelado por Agua");
-        System.out.println("3. Congelado por Nitrógeno");
-
-        int tipoCongelado = entrada.nextInt();
+        
+        int tipoCongelado = tipo_de_congelacion_producto(entrada);
         ProductosCongelados producto = null;
 
         switch (tipoCongelado) {
             case 1:
                 System.out.println("Ingresa porcentaje de nitrógeno:");
                 float nitrogeno = entrada.nextFloat();
+                
                 System.out.println("Ingresa porcentaje de oxígeno:");
                 float oxigeno = entrada.nextFloat();
+                
                 System.out.println("Ingresa porcentaje de dióxido de carbono:");
                 float dioxidoCarbono = entrada.nextFloat();
+                
                 System.out.println("Ingresa porcentaje de vapor de agua:");
                 float vaporAgua = entrada.nextFloat();
+                
                 producto = new CongeladosPorAire(nitrogeno, oxigeno, dioxidoCarbono, vaporAgua);
                 break;
             case 2:
@@ -88,12 +88,10 @@ public class AgregarProductos extends ComponentesMenu {
                 producto = new CongeladosPorAgua(salinidad);
                 break;
             case 3:
-                entrada.nextLine(); // Consumir la línea restante
-                System.out.println("Ingresa el método de congelación:");
-                String metodoCongelacion = entrada.nextLine();
+                entrada.nextLine(); 
                 System.out.println("Ingresa el tiempo de exposición al nitrógeno (en segundos):");
                 int tiempoExposicion = entrada.nextInt();
-                producto = new CongeladosPorNitrogeno(metodoCongelacion, tiempoExposicion);
+                producto = new CongeladosPorNitrogeno( "Nitrogeno", tiempoExposicion);
                 break;
             default:
                 System.out.println("Opción no válida.");
@@ -102,14 +100,18 @@ public class AgregarProductos extends ComponentesMenu {
 
         if (producto != null) {
             producto.setId_articulo(id_articulo);
-            entrada.nextLine();  // Consumir línea extra
+            entrada.nextLine();  
+            
             System.out.println("Ingresa el nombre del artículo:");
             producto.setNombre(entrada.nextLine());
+            
             System.out.println("Ingresa número de lote:");
             producto.setNumero_lote(entrada.nextInt());
             entrada.nextLine();
+            
             System.out.println("Ingresa fecha de envasado:");
             producto.setFecha_envasado(entrada.nextLine());
+            
             System.out.println("Ingresa la temperatura de mantenimiento recomendada:");
             producto.setTemperatura_mantenimiento(entrada.nextLine());
         }

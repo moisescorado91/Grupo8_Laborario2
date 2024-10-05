@@ -10,15 +10,13 @@ package componentes;
  */
 public class CongeladosPorAgua extends ProductosCongelados {
 
-    private float salPorLitro;
-
     public CongeladosPorAgua(float salPorLitro) {
-        this.salPorLitro = salPorLitro;
+        this.sal_por_litro = salPorLitro;
     }
 
     @Override
     public void mostrar_informacion() {
         super.mostrar_informacion();
-        System.out.println("Salinidad del agua: " + salPorLitro + " gramos de sal por litro de agua");
+        System.out.println("Salinidad del agua: " + sal_por_litro + " gramos de sal por litro de agua");
     }
 }

@@ -10,18 +10,15 @@ package componentes;
  */
 public class CongeladosPorNitrogeno extends ProductosCongelados {
 
-    private String metodoCongelacion;
-    private int tiempoExposicionNitrogeno;
-
     public CongeladosPorNitrogeno(String metodoCongelacion, int tiempoExposicionNitrogeno) {
-        this.metodoCongelacion = metodoCongelacion;
-        this.tiempoExposicionNitrogeno = tiempoExposicionNitrogeno;
+        this.metodo_congelacion = metodoCongelacion;
+        this.tiempo_exposicion_nitrogeno = tiempoExposicionNitrogeno;
     }
 
     @Override
     public void mostrar_informacion() {
         super.mostrar_informacion();
-        System.out.println("Método de congelación: " + metodoCongelacion);
-        System.out.println("Tiempo de exposición al nitrógeno: " + tiempoExposicionNitrogeno + " segundos");
+        System.out.println("Método de congelación: " + metodo_congelacion);
+        System.out.println("Tiempo de exposición al nitrógeno: " + tiempo_exposicion_nitrogeno + " segundos");
     }
 }

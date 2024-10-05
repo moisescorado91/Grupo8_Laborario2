@@ -10,17 +10,11 @@ package componentes;
  */
 public class CongeladosPorAire extends ProductosCongelados {
 
-    private float porcentajeNitrogeno;
-    private float porcentajeOxigeno;
-    private float porcentajeDioxidoCarbono;
-    private float porcentajeVaporAgua;
-
-    public CongeladosPorAire(float porcentajeNitrogeno, float porcentajeOxigeno, 
-                             float porcentajeDioxidoCarbono, float porcentajeVaporAgua) {
-        this.porcentajeNitrogeno = porcentajeNitrogeno;
-        this.porcentajeOxigeno = porcentajeOxigeno;
-        this.porcentajeDioxidoCarbono = porcentajeDioxidoCarbono;
-        this.porcentajeVaporAgua = porcentajeVaporAgua;
+    public CongeladosPorAire(float porcentajeNitrogeno, float porcentajeOxigeno, float porcentajeDioxidoCarbono, float porcentajeVaporAgua) {
+        this.porcentaje_nitrogeno = porcentajeNitrogeno;
+        this.porcentaje_oxigeno = porcentajeOxigeno;
+        this.porcentaje_dioxido_carbono = porcentajeDioxidoCarbono;
+        this.porcentaje_vapor_agua = porcentajeVaporAgua;
     }
 
     @Override
@@ -42,9 +36,9 @@ public class CongeladosPorAire extends ProductosCongelados {
         // Mostrar la información del producto congelado
         super.mostrar_informacion();
         System.out.println("Composición del aire:");
-        System.out.println("Nitrógeno: " + porcentajeNitrogeno + "%");
-        System.out.println("Oxígeno: " + porcentajeOxigeno + "%");
-        System.out.println("Dióxido de Carbono: " + porcentajeDioxidoCarbono + "%");
-        System.out.println("Vapor de Agua: " + porcentajeVaporAgua + "%");
+        System.out.println("Nitrógeno: " + porcentaje_nitrogeno + "%");
+        System.out.println("Oxígeno: " + porcentaje_oxigeno + "%");
+        System.out.println("Dióxido de Carbono: " + porcentaje_dioxido_carbono + "%");
+        System.out.println("Vapor de Agua: " + porcentaje_vapor_agua + "%");
     }
 }
