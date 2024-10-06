@@ -8,9 +8,9 @@ package com.poo.mavenproject1;
  *
  * @author carlo
  */
-public class Mavenproject1 {
+// public class Mavenproject1 {
 
-    public static void main(String[] args) {
-        System.out.println("Hello World!");
-    }
-}
+//     public static void main(String[] args) {
+//         System.out.println("Hello World!");
+//     }
+// }
