@@ -16,11 +16,11 @@ public class AgregarProductos extends ComponentesMenu {
         ProductosFrescos objeto_producto_fresco = new ProductosFrescos();
 
         objeto_producto_fresco.setId_articulo(id_articulo);
+        entrada.nextLine();
         objeto_producto_fresco.setCategoria(tipos_productos_frescos(entrada));
 
         System.out.println("Ingresa El nombre del articulo");
         objeto_producto_fresco.setNombre(entrada.nextLine());
-
 
         System.out.println("Ingresa numero de lote del articulo");
         objeto_producto_fresco.setNumero_lote(entrada.nextInt());
@@ -39,6 +39,7 @@ public class AgregarProductos extends ComponentesMenu {
         ProductosRefrigerados objeto_producto_refrigerado = new ProductosRefrigerados();
 
         objeto_producto_refrigerado.setId_articulo(id_articulo);
+        entrada.nextLine();
         objeto_producto_refrigerado.setCategoria(tipos_productos_refrigerados(entrada));
 
         System.out.println("Ingresa El nombre del articulo");
@@ -62,7 +63,7 @@ public class AgregarProductos extends ComponentesMenu {
     }
 
     public ProductosCongelados agregar_producto_congelado(Scanner entrada, int id_articulo) {
-        
+
         int tipoCongelado = tipo_de_congelacion_producto(entrada);
         ProductosCongelados producto = null;
 
@@ -70,16 +71,16 @@ public class AgregarProductos extends ComponentesMenu {
             case 1:
                 System.out.println("Ingresa porcentaje de nitrógeno:");
                 float nitrogeno = entrada.nextFloat();
-                
+
                 System.out.println("Ingresa porcentaje de oxígeno:");
                 float oxigeno = entrada.nextFloat();
-                
+
                 System.out.println("Ingresa porcentaje de dióxido de carbono:");
                 float dioxidoCarbono = entrada.nextFloat();
-                
+
                 System.out.println("Ingresa porcentaje de vapor de agua:");
                 float vaporAgua = entrada.nextFloat();
-                
+
                 producto = new CongeladosPorAire(nitrogeno, oxigeno, dioxidoCarbono, vaporAgua);
                 break;
             case 2:
@@ -90,7 +91,7 @@ public class AgregarProductos extends ComponentesMenu {
             case 3:
                 System.out.println("Ingresa el metodo de congelacion empleado");
                 String metodo_congelacion = entrada.nextLine();
-                entrada.nextLine(); 
+                entrada.nextLine();
                 System.out.println("Ingresa el tiempo de exposición al nitrógeno (en segundos):");
                 int tiempoExposicion = entrada.nextInt();
                 producto = new CongeladosPorNitrogeno(metodo_congelacion, tiempoExposicion);
@@ -102,18 +103,18 @@ public class AgregarProductos extends ComponentesMenu {
 
         if (producto != null) {
             producto.setId_articulo(id_articulo);
-            entrada.nextLine();  
-            
+            entrada.nextLine();
+
             System.out.println("Ingresa el nombre del artículo:");
             producto.setNombre(entrada.nextLine());
-            
+
             System.out.println("Ingresa número de lote:");
             producto.setNumero_lote(entrada.nextInt());
             entrada.nextLine();
-            
+
             System.out.println("Ingresa fecha de envasado:");
             producto.setFecha_envasado(entrada.nextLine());
-            
+
             System.out.println("Ingresa la temperatura de mantenimiento recomendada:");
             producto.setTemperatura_mantenimiento(entrada.nextLine());
         }
@@ -125,6 +126,7 @@ public class AgregarProductos extends ComponentesMenu {
         ProductosEnvasados objeto_producto_envasados = new ProductosEnvasados();
 
         objeto_producto_envasados.setId_articulo(id_articulo);
+        entrada.nextLine();
         objeto_producto_envasados.setCategoria(tipos_productos_envasados(entrada));
 
         System.out.println("Ingresa El nombre del articulo");
