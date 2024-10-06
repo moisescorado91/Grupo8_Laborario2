@@ -11,11 +11,8 @@ public abstract class Articulos {
     private String categoria;
     private int numero_lote;
     private String temperatura_mantenimiento;
-    //para productos frescos verduras o frutas
     private String fecha_ingreso;
     private String fecha_caducidad;
-
-    //para productos refrigerados
     private String fecha_envasado;
     private String pais_origen;
     private boolean refrigerar_despues_abierto;
