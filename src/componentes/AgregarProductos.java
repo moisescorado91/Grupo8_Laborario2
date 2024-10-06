@@ -20,7 +20,7 @@ public class AgregarProductos extends ComponentesMenu {
 
         System.out.println("Ingresa El nombre del articulo");
         objeto_producto_fresco.setNombre(entrada.nextLine());
-        entrada.nextLine();
+
 
         System.out.println("Ingresa numero de lote del articulo");
         objeto_producto_fresco.setNumero_lote(entrada.nextInt());
