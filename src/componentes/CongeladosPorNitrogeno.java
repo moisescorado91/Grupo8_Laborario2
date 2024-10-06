@@ -4,13 +4,10 @@
  */
 package componentes;
 
-/**
- *
- * @author carlo
- */
 public class CongeladosPorNitrogeno extends ProductosCongelados {
 
     public CongeladosPorNitrogeno(String metodoCongelacion, int tiempoExposicionNitrogeno) {
+        this.tipo_congelado = "Nitrogeno";
         this.metodo_congelacion = metodoCongelacion;
         this.tiempo_exposicion_nitrogeno = tiempoExposicionNitrogeno;
     }

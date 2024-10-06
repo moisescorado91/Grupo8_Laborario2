@@ -6,10 +6,6 @@ package componentes;
 
 import java.util.Scanner;
 
-/**
- *
- * @author Moises Molina
- */
 public class ComponentesMenu {
 
     //menu principal

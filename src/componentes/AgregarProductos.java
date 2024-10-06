@@ -88,10 +88,12 @@ public class AgregarProductos extends ComponentesMenu {
                 producto = new CongeladosPorAgua(salinidad);
                 break;
             case 3:
+                System.out.println("Ingresa el metodo de congelacion empleado");
+                String metodo_congelacion = entrada.nextLine();
                 entrada.nextLine(); 
                 System.out.println("Ingresa el tiempo de exposición al nitrógeno (en segundos):");
                 int tiempoExposicion = entrada.nextInt();
-                producto = new CongeladosPorNitrogeno( "Nitrogeno", tiempoExposicion);
+                producto = new CongeladosPorNitrogeno(metodo_congelacion, tiempoExposicion);
                 break;
             default:
                 System.out.println("Opción no válida.");

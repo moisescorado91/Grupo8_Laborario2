@@ -4,14 +4,11 @@
  */
 package componentes;
 
-/**
- *
- * @author carlo
- */
 public class CongeladosPorAgua extends ProductosCongelados {
 
     public CongeladosPorAgua(float salPorLitro) {
         this.sal_por_litro = salPorLitro;
+        this.tipo_congelado = "Agua";
     }
 
     @Override

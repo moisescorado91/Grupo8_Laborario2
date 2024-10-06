@@ -12,9 +12,11 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Moises%20Molina/Documents/NetBeansProjects/GRUPO8-2024-POO-GUIA2/src/componentes/ComponentesMenu.java</file>
-            <file>file:/C:/Users/Moises%20Molina/Documents/NetBeansProjects/GRUPO8-2024-POO-GUIA2/src/componentes/Articulos.java</file>
+            <file>file:/C:/Users/Moises%20Molina/Documents/NetBeansProjects/GRUPO8-2024-POO-GUIA2/src/componentes/CongeladosPorAire.java</file>
+            <file>file:/C:/Users/Moises%20Molina/Documents/NetBeansProjects/GRUPO8-2024-POO-GUIA2/src/componentes/CongeladosPorAgua.java</file>
+            <file>file:/C:/Users/Moises%20Molina/Documents/NetBeansProjects/GRUPO8-2024-POO-GUIA2/src/componentes/ProductosCongelados.java</file>
             <file>file:/C:/Users/Moises%20Molina/Documents/NetBeansProjects/GRUPO8-2024-POO-GUIA2/src/principal/main.java</file>
+            <file>file:/C:/Users/Moises%20Molina/Documents/NetBeansProjects/GRUPO8-2024-POO-GUIA2/src/componentes/CongeladosPorNitrogeno.java</file>
         </group>
     </open-files>
 </project-private>

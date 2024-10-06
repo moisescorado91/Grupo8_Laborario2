@@ -26,14 +26,38 @@ public class main {
         // Lista genérica para almacenar los productos
         ArrayList<Articulos> productos = new ArrayList<>();
 
-        ProductosFrescos test1_fresco = new ProductosFrescos(1001, "Manzana", "Frutas", 1001, "2024-10-03", "2024-10-03");
+        /**
+         * PRODUCTOS POR DEFECTOS
+         */
+        ProductosFrescos test1_fresco = new ProductosFrescos(1001, "Manzana", "Frutas", 100102, "2024-10-03", "2024-10-03");
+        ProductosFrescos test2_fresco = new ProductosFrescos(1002, "Papa", "Verdura", 100102, "2024-10-03", "2024-10-03");
         productos.add(test1_fresco);
+        productos.add(test2_fresco);
 
-        ProductosEnvasados test1_envasado = new ProductosEnvasados(1002, "Nombre", "Sopa", 1002, "2024-10-03", "2024-10-03", true);
-        productos.add(test1_envasado);
+        ProductosEnvasados test2_envasado = new ProductosEnvasados(1003, "Sopa de Tomate", "Sopa", 100302, "2024-09-30", "2025-09-30", true);
+        ProductosEnvasados test3_envasado = new ProductosEnvasados(1004, "Frijoles Negros", "Frijoles", 100402, "2024-10-01", "2026-10-01", false);
+        ProductosEnvasados test4_envasado = new ProductosEnvasados(1005, "Salsa de Tomate", "Salsas", 100502, "2024-08-15", "2025-08-15", true);
+        productos.add(test2_envasado);
+        productos.add(test3_envasado);
+        productos.add(test4_envasado);
 
-        ProductosRefrigerados test1_refrigerado = new ProductosRefrigerados(1003, "Gaseosa", "Refresco", 1003, "2024-10-03", "2024-10-03", "El Salvador");
+        ProductosRefrigerados test1_refrigerado = new ProductosRefrigerados(1006, "Refresco de Cola", "Refrescos", 100103, "2024-09-28", "2°C", "EE. UU.");
+        ProductosRefrigerados test2_refrigerado = new ProductosRefrigerados(1007, "Pizza de Pepperoni", "Pizzas", 100203, "2024-10-01", "-18°C", "Italia");
+        ProductosRefrigerados test3_refrigerado = new ProductosRefrigerados(1013, "Hamburguesa de Res", "Hamburguesas", 100303, "2024-10-03", "0°C", "EE. UU.");
         productos.add(test1_refrigerado);
+        productos.add(test2_refrigerado);
+        productos.add(test3_refrigerado);
+
+        ProductosCongelados test1_congelado = new ProductosCongelados(1014, "Helado de Vainilla", "Helados", 100104, "2024-09-20", "-18°C", "Congelado por aire", "Aire", 78.0, 21.0, 0.04, 0.0, 0.0, 0);
+        ProductosCongelados test2_congelado = new ProductosCongelados(1015, "Paleta de Frutas", "Paletas", 100204, "2024-09-22", "-18°C", "Congelado por aire", "Aire", 78.0, 21.0, 0.04, 0.0, 0.0, 0);
+        ProductosCongelados test3_congelado = new ProductosCongelados(1016, "Hielo en Cubos", "Hielo", 100304, "2024-10-01", "-10°C", "Congelado por agua", "Agua", 0.0, 0.0, 0.0, 0.0, 0.5, 0);
+        ProductosCongelados test4_congelado = new ProductosCongelados(1017, "Helado de Chocolate", "Helados", 100404, "2024-09-15", "-18°C", "Congelado por agua", "Agua", 0.0, 0.0, 0.0, 0.0, 0.8, 0);
+        ProductosCongelados test5_congelado = new ProductosCongelados(1018, "Hamburguesa Congelada", "Hamburguesas", 100504, "2024-10-02", "-20°C", "Congelado por nitrógeno", "Nitrógeno", 0.0, 0.0, 0.0, 0.0, 0.0, 30);
+        productos.add(test1_congelado);
+        productos.add(test2_congelado);
+        productos.add(test3_congelado);
+        productos.add(test4_congelado);
+        productos.add(test5_congelado);
 
         int id_articulo = 1;
         int respuesta_menu;

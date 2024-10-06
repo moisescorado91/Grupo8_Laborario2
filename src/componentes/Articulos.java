@@ -4,10 +4,6 @@
  */
 package componentes;
 
-/**
- *
- * @author Moises Molina
- */
 public abstract class Articulos {
 
     private int id_articulo;

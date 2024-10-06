@@ -4,10 +4,6 @@
  */
 package componentes;
 
-/**
- *
- * @author Moises Molina
- */
 public class ProductosRefrigerados extends Articulos {
     
     public ProductosRefrigerados() {

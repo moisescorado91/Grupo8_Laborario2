@@ -4,10 +4,6 @@
  */
 package componentes;
 
-/**
- *
- * @author carlo
- */
 public class CongeladosPorAire extends ProductosCongelados {
 
     public CongeladosPorAire(float porcentajeNitrogeno, float porcentajeOxigeno, float porcentajeDioxidoCarbono, float porcentajeVaporAgua) {
@@ -15,6 +11,7 @@ public class CongeladosPorAire extends ProductosCongelados {
         this.porcentaje_oxigeno = porcentajeOxigeno;
         this.porcentaje_dioxido_carbono = porcentajeDioxidoCarbono;
         this.porcentaje_vapor_agua = porcentajeVaporAgua;
+        this.tipo_congelado = "Agua";
     }
 
     @Override

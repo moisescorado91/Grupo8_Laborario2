@@ -4,10 +4,6 @@
  */
 package componentes;
 
-/**
- *
- * @author Moises Molina
- */
 public class ProductosEnvasados extends Articulos {
     public ProductosEnvasados() {
         

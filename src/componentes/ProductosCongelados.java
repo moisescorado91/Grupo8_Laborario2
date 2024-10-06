@@ -4,13 +4,9 @@
  */
 package componentes;
 
-/**
- *
- * @author Moises Molina
- */
 public class ProductosCongelados extends Articulos {
 
-    private String tipo_congelado;
+    protected String tipo_congelado;
     protected float porcentaje_nitrogeno;
     protected float porcentaje_oxigeno;
     protected float porcentaje_dioxido_carbono;
@@ -30,13 +26,18 @@ public class ProductosCongelados extends Articulos {
         this.sal_por_litro = 0;
     }
 
-    public ProductosCongelados(int id_articulo, String nombre, String categoria, int lote, String fecha_envasado, String temperatura, double porcentaje_nitrogeno, double porcentaje_oxigeno, double porcentaje_dioxido_carbono, double porcentaje_vapor_agua, double sal_por_litro) {
+    public ProductosCongelados(int id_articulo, String nombre, String categoria, int lote, String fecha_envasado, String temperatura,
+            String metodo_congelacion, String tipo_congelado, double porcentaje_nitrogeno, double porcentaje_oxigeno,
+            double porcentaje_dioxido_carbono, double porcentaje_vapor_agua, double sal_por_litro, float tiempo_exposicion_nitrogeno) {
         setId_articulo(id_articulo);
         setNombre(nombre);
         setCategoria(categoria);
         setNumero_lote(lote);
         setFecha_envasado(fecha_envasado);
         setTemperatura_mantenimiento(temperatura);
+        setMetodo_congelacion(metodo_congelacion);
+        setTiempo_exposicion_nitrogeno(tiempo_exposicion_nitrogeno);
+        this.tipo_congelado = tipo_congelado;
         this.porcentaje_nitrogeno = (float) porcentaje_nitrogeno;
         this.porcentaje_oxigeno = (float) porcentaje_oxigeno;
         this.porcentaje_dioxido_carbono = (float) porcentaje_dioxido_carbono;
@@ -51,7 +52,9 @@ public class ProductosCongelados extends Articulos {
                 + " CATEGORIA: " + getCategoria()
                 + " LOTE: " + getNumero_lote()
                 + " FECHA ENVASADO: " + getFecha_envasado()
-                + " TEMPERATURA RECOMENDADA : " + getTemperatura_mantenimiento());
+                + " TEMPERATURA RECOMENDADA : " + getTemperatura_mantenimiento()
+                + "TIPO CONGELACION: " + getMetodo_congelacion());
+        
 
         if (this.getMetodo_congelacion() != null) {
             System.out.println("Método de congelación: " + getMetodo_congelacion());
