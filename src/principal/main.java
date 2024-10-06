@@ -2,6 +2,22 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
+
+/**
+ * *********************************************************************************
+                    *          EQUIPO 8
+ * *********************************************************************************
+ * 
+ * INTEGRANTES:
+ * 
+ * MOISES ISAAC MOLINA CORADO   | MC23152
+ * Solis Flores Carlos ManueL   | SF10020
+ * Tulio Daniel Benitez López   | BL23018
+ * Emerson Alberto Ponce Ángel  | PA23013
+ * Roberto José Mena Medrano    | MM22025
+ */
+
+
 package principal;
 
 import java.util.ArrayList;
